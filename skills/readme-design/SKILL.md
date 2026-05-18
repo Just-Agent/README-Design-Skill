@@ -29,6 +29,17 @@ Use a strong opening block:
 
 Avoid a first screen that is only a title, one subtitle, many tiny links, and a horizontal rule.
 
+## Logo And README Wordmark
+
+When a product-like repository does not have a recognizable first-viewport identity, design a small original logo or wordmark for the README top.
+
+- Keep the project name as the real `<h1>` and place the logo above or beside it with GitHub-safe `<img>` HTML.
+- Prefer repo-owned assets such as `docs/readme-assets/logo.svg`, `docs/assets/logo.svg`, or `assets/logo.png`.
+- Make the logo original and project-specific; do not copy reference images, third-party mascots, trademarks, or marketplace icons.
+- Use SVG for crisp README rendering, and create a PNG fallback only when thumbnails, social cards, or external platforms need it.
+- Keep the first viewport useful: logo, positioning sentence, badges, primary links, and one proof image should fit without burying the project explanation.
+- Verify the asset path, alt text, file size, and light/dark GitHub readability.
+
 ## Layout Patterns
 
 Prefer one of these:
@@ -93,6 +104,14 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 - Activity Overview is included for profile or contributor-focused READMEs when contribution mix is part of the story.
 - The license and contribution path are easy to find.
 - The README still renders correctly without external CSS or JavaScript.
+
+## Public Repository Quality Gate
+
+For public GitHub repositories, make the README satisfy these three traits:
+
+- **Professional:** accurate positioning, truthful badges and links, clear install/use path, license visibility, and no exaggerated claims.
+- **Beautiful:** a strong first viewport, tasteful visual proof, readable spacing, restrained badge groups, and screenshots or diagrams that help people understand the project quickly.
+- **Universal:** instructions and examples that work beyond the owner's machine, avoid private paths or account assumptions, and mention platform differences when they matter.
 
 ## Safety And Accuracy
 
