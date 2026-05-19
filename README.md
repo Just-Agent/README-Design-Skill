@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/assets/readme-design-cover.svg" alt="README Design Skill cover" width="980" />
+  <img src="./docs/assets/readme-design-logo.svg" alt="README Design Skill logo" width="340" />
   <h1>README Design Skill</h1>
   <p><strong>把 GitHub README 当成项目首页来设计，而不是当成说明书来堆内容。</strong></p>
   <p>
@@ -24,6 +24,10 @@
   </p>
 </div>
 
+<p align="center">
+  <img src="./docs/assets/readme-design-cover.svg" alt="README Design Skill cover" width="980" />
+</p>
+
 ---
 
 ## Why This Exists
@@ -41,6 +45,7 @@ This skill now treats a README top logo or wordmark as a first-class design capa
 | Logo decision flow | The skill decides when a public repo needs a top identity mark | [SKILL.md](./skills/readme-design/SKILL.md) |
 | Logo guide | Full rules for original marks, asset paths, snippets, and QA | [logo-wordmark.md](./skills/readme-design/references/logo-wordmark.md) |
 | Reusable partial | Drop-in GitHub-safe logo hero block | [logo-hero.md](./skills/readme-design/assets/templates/partials/logo-hero.md) |
+| Self-hosted logo | This repository now uses its own repo-owned SVG logo at the top | [readme-design-logo.svg](./docs/assets/readme-design-logo.svg) |
 | Template coverage | Default, product, library, and bilingual templates now acknowledge README logos | [Template Gallery](./skills/readme-design/assets/templates/README.md) |
 | Public quality gate | Professional, beautiful, universal README criteria are part of the skill | [Design Patterns](./skills/readme-design/references/patterns.md) |
 
