@@ -1,53 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">README Design Skill logo</title>
-  <desc id="desc">A polished README document mark with layout blocks, a design pen, and the README wordmark.</desc>
+  <desc id="desc">A compact document, layout, checkmark, and design pencil mark for README design work.</desc>
   <defs>
-    <linearGradient id="page" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f1f5f9"/>
+    <linearGradient id="shell" x1="64" x2="448" y1="64" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#edf7ff"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="48%" stop-color="#10a37f"/>
-      <stop offset="100%" stop-color="#2563eb"/>
+    <linearGradient id="accent" x1="136" x2="376" y1="138" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="0.52" stop-color="#10a37f"/>
+      <stop offset="1" stop-color="#2563eb"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" x2="1">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#f97316"/>
+    <linearGradient id="pencil" x1="315" x2="399" y1="230" y2="354" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fde68a"/>
+      <stop offset="0.52" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f97316"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="8" flood-color="#020617" flood-opacity="0.22"/>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <rect width="760" height="360" fill="#f8fafc"/>
-  <circle cx="602" cy="68" r="78" fill="#38bdf8" opacity="0.13"/>
-  <circle cx="158" cy="300" r="96" fill="#10a37f" opacity="0.12"/>
+  <rect x="42" y="42" width="428" height="428" rx="108" fill="url(#shell)"/>
+  <circle cx="390" cy="124" r="42" fill="#38bdf8" opacity="0.14"/>
+  <circle cx="116" cy="386" r="54" fill="#10a37f" opacity="0.12"/>
 
-  <g filter="url(#shadow)">
-    <rect x="214" y="38" width="332" height="236" rx="28" fill="url(#page)" stroke="#0f172a" stroke-width="9"/>
-    <rect x="246" y="70" width="82" height="18" rx="9" fill="#10a37f"/>
-    <rect x="246" y="108" width="184" height="30" rx="15" fill="#0f172a"/>
-    <rect x="246" y="158" width="236" height="14" rx="7" fill="#cbd5e1"/>
-    <rect x="246" y="186" width="188" height="14" rx="7" fill="#e2e8f0"/>
-    <rect x="246" y="224" width="66" height="26" rx="13" fill="#dbeafe"/>
-    <rect x="326" y="224" width="66" height="26" rx="13" fill="#dcfce7"/>
-    <rect x="406" y="224" width="66" height="26" rx="13" fill="#fef3c7"/>
+  <g filter="url(#softShadow)">
+    <rect x="128" y="86" width="256" height="330" rx="42" fill="#ffffff" stroke="#111827" stroke-width="10"/>
+    <rect x="168" y="132" width="88" height="18" rx="9" fill="#10a37f"/>
+    <rect x="168" y="174" width="176" height="24" rx="12" fill="#111827"/>
+    <rect x="168" y="226" width="148" height="14" rx="7" fill="#cbd5e1"/>
+    <rect x="168" y="258" width="108" height="14" rx="7" fill="#e2e8f0"/>
+    <rect x="168" y="308" width="54" height="26" rx="13" fill="#dbeafe"/>
+    <rect x="236" y="308" width="54" height="26" rx="13" fill="#dcfce7"/>
+    <rect x="304" y="308" width="40" height="26" rx="13" fill="#fef3c7"/>
   </g>
 
-  <g filter="url(#shadow)" transform="rotate(-18 506 176)">
-    <rect x="472" y="88" width="44" height="150" rx="20" fill="url(#gold)" stroke="#0f172a" stroke-width="7"/>
-    <path d="M472 216h44l-22 46z" fill="#fff7ed" stroke="#0f172a" stroke-width="7" stroke-linejoin="round"/>
-    <path d="M494 246l-9 22h18z" fill="#0f172a"/>
-    <rect x="473" y="92" width="42" height="38" rx="18" fill="#fde68a" opacity="0.65"/>
-  </g>
+  <path d="M112 250c27 1 43 18 61 49 23-64 69-104 137-124" fill="none" stroke="url(#accent)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
 
-  <g filter="url(#shadow)">
-    <path d="M182 150c26 0 38 17 54 44 17-47 48-76 96-92" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="148" y="260" width="464" height="60" rx="18" fill="#0f172a"/>
-    <text x="380" y="302" text-anchor="middle" font-family="Arial Black, Impact, ui-sans-serif, sans-serif" font-size="42" font-weight="900" fill="#f8fafc">README Design</text>
+  <g filter="url(#softShadow)" transform="rotate(-18 346 318)">
+    <rect x="322" y="226" width="48" height="136" rx="22" fill="url(#pencil)" stroke="#111827" stroke-width="8"/>
+    <path d="M322 344h48l-24 54z" fill="#fff7ed" stroke="#111827" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M346 384l-11 25h22z" fill="#111827"/>
+    <rect x="324" y="230" width="44" height="34" rx="17" fill="#fef3c7" opacity="0.7"/>
   </g>
 </svg>

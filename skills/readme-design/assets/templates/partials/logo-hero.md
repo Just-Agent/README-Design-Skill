@@ -5,7 +5,8 @@ Replace paths, names, badges, and links with repository facts.
 -->
 
 <div align="center">
-  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="320" />
+  <!-- Keep this as a compact icon/object mark. Do not put the full project title or tagline inside the SVG. -->
+  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="240" />
   <h1>Project Name</h1>
   <p><strong>A concrete one-sentence promise for the repository.</strong></p>
   <p>Audience · Core workflow · Main proof point</p>
@@ -28,3 +29,11 @@ Replace paths, names, badges, and links with repository facts.
 <p align="center">
   <img src="./docs/readme-assets/preview.png" alt="Project preview" style="max-width:960px;width:100%;" />
 </p>
+
+<!--
+Logo safety checklist:
+- compact icon/object/abstract mascot mark, not a wide title banner
+- no long SVG text; project name stays in the h1
+- no clipping, edge collisions, or overlapping foreground elements
+- readable at the exact README display width
+-->

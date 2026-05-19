@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/assets/readme-design-logo.svg" alt="README Design Skill logo" width="340" />
+  <img src="./docs/assets/readme-design-logo.svg" alt="README Design Skill logo" width="240" />
   <h1>README Design Skill</h1>
   <p><strong>把 GitHub README 当成项目首页来设计，而不是当成说明书来堆内容。</strong></p>
   <p>
@@ -44,8 +44,9 @@ This skill now treats a README top logo or wordmark as a first-class design capa
 | --- | --- | --- |
 | Logo decision flow | The skill decides when a public repo needs a top identity mark | [SKILL.md](./skills/readme-design/SKILL.md) |
 | Logo guide | Full rules for original marks, asset paths, snippets, and QA | [logo-wordmark.md](./skills/readme-design/references/logo-wordmark.md) |
+| Logo safety gate | New guardrails prevent clipped text, overlapping elements, and title-heavy SVG banners | [logo-wordmark.md](./skills/readme-design/references/logo-wordmark.md#logo-safety-gate) |
 | Reusable partial | Drop-in GitHub-safe logo hero block | [logo-hero.md](./skills/readme-design/assets/templates/partials/logo-hero.md) |
-| Self-hosted logo | This repository now uses its own repo-owned SVG logo at the top | [readme-design-logo.svg](./docs/assets/readme-design-logo.svg) |
+| Self-hosted logo | This repository now uses its own compact repo-owned SVG mark at the top | [readme-design-logo.svg](./docs/assets/readme-design-logo.svg) |
 | Template coverage | Default, product, library, and bilingual templates now acknowledge README logos | [Template Gallery](./skills/readme-design/assets/templates/README.md) |
 | Public quality gate | Professional, beautiful, universal README criteria are part of the skill | [Design Patterns](./skills/readme-design/references/patterns.md) |
 
@@ -86,6 +87,7 @@ This skill now treats a README top logo or wordmark as a first-class design capa
 
 - **First screen clarity**: a visitor should understand the project in 10 seconds.
 - **README logo / wordmark**: product-like repos should get a small original top identity when they do not already have one.
+- **Logo safety**: top logos should be compact icon, object, or abstract mascot marks with no clipping, no overlap, and no long title text inside the SVG.
 - **Original visual identity**: reference images can guide composition, but the resulting mark must be distinct and repo-owned.
 - **Visual evidence**: screenshots, diagrams, result previews, or structured examples.
 - **Trust signals**: badges, Star History, license, contribution path, and real status.
@@ -106,7 +108,7 @@ Use this when the user asks for a README logo or when a public product-like repo
 
 ```html
 <div align="center">
-  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="320" />
+  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="240" />
   <h1>Project Name</h1>
   <p><strong>One concrete sentence about what the project does.</strong></p>
 </div>

@@ -46,10 +46,21 @@ Design rules:
 - Match the logo to the repository's real domain: CLI tools can use terminal/code symbols, design systems can use layout marks, data repos can use charts, skills can use document/action marks.
 - Verify the asset path, alt text, file size, and light/dark GitHub readability.
 
+Logo safety gate:
+
+- Prefer compact icon-only marks or short badges over wide text-heavy banners. Put the full project name in the README `<h1>`, not inside the SVG.
+- Do not place long descriptions, long repository names, or full taglines inside the logo. SVG text should be avoided unless it is a tiny 1-3 word label that cannot overflow.
+- Use a stable square or compact canvas such as `512x512`, `640x360`, or `760x360`; do not create a long horizontal banner that depends on GitHub scaling to remain readable.
+- Keep at least 10% internal padding on every side. No strokes, shadows, text, icons, badges, or decorative shapes may touch or cross the viewBox edge.
+- Avoid overlapping foreground elements. Every icon, badge, label, and connector must have a clear hit area and must remain readable at the README display width.
+- Prefer abstract objects, abstract animals, devices, documents, route marks, cursors, windows, cameras, packages, or other memorable symbols that can stand alone without title text.
+- If a logo references a cute object or animal, make it abstract and domain-specific; do not copy mascots, trademarks, emoji, clip-art, or a supplied reference image.
+- Before publishing, inspect the README first viewport and revise if any logo text is clipped, hidden, too small, or visually competes with the `<h1>`.
+
 Output contract:
 
 - Save the primary logo under a stable repo-owned path.
-- Add the logo to the README top with a width between `180` and `360` unless the existing design calls for a different size.
+- Add the logo to the README top with a width between `180` and `320` for compact icon marks, or at most `360` for marks with short labels.
 - Mention the logo in the README asset table when the README already has one.
 - If the repo has thumbnail or social-card assets, regenerate or update them so the new identity appears consistently.
 
@@ -113,6 +124,7 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 
 - The first screen shows what the project is and why it matters.
 - Product-like repos have an original README logo or a conscious decision not to add one.
+- README logos pass the logo safety gate: no clipping, no hidden text, no overlapping elements, no long title embedded in the SVG, and no edge collisions.
 - There is at least one visual proof element for UI/product/tutorial repos.
 - The primary action links are visible near the top.
 - Badges are relevant and not noisy.
@@ -137,5 +149,6 @@ For public GitHub repositories, make the README satisfy these three traits:
 - Check existing repository files before referencing screenshots, demos, docs, or badges.
 - Do not claim GitHub Pages, CI, releases, license, or package support unless the repo actually has it or the user asks to create it.
 - Do not copy a logo from a reference image. Use references only for composition direction and create a different original mark.
+- Do not ship a README logo until you have verified that it renders safely at the README display width without cropping, overlap, or unreadable text.
 - Preserve user content that represents project truth, but improve hierarchy, wording, and presentation.
 - When changing README links, verify local paths exist where practical.
