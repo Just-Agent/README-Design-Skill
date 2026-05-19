@@ -1,6 +1,7 @@
 <!-- Library/tool README template. Keep the top half short and runnable. -->
 
 <div align="center">
+  <!-- Optional: <img src="./docs/readme-assets/logo.svg" alt="typed-cache logo" width="220" /> -->
   <h1>typed-cache</h1>
   <p><strong>A tiny typed cache layer for Node.js services that need predictable expiry and testable storage.</strong></p>
   <p>

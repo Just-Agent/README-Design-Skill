@@ -1,6 +1,6 @@
 ---
 name: readme-design
-description: Design and rewrite polished GitHub README homepages for repositories and profile READMEs, especially Chinese/English open-source projects. Use when the user asks to beautify, redesign, improve, package, market, or make a README more professional, visual, persuasive, scannable, or GitHub Pages-like. Focus on README aesthetics, layout, badges, screenshots, project positioning, information architecture, and Markdown/HTML that renders well on GitHub.
+description: Design and rewrite polished GitHub README homepages for repositories and profile READMEs, especially Chinese/English open-source projects. Use when the user asks to beautify, redesign, improve, package, market, add a README logo or wordmark, or make a README more professional, visual, persuasive, scannable, or GitHub Pages-like. Focus on README aesthetics, layout, badges, screenshots, logo/wordmark identity, project positioning, information architecture, and Markdown/HTML that renders well on GitHub.
 ---
 
 # README Design
@@ -12,16 +12,17 @@ Treat a README as the repository's homepage, not just documentation. Make the fi
 1. Audit the current README and repository assets.
 2. Identify the audience: users, contributors, researchers, employers, investors, or open-source visitors.
 3. Define the repository's first-viewport message: name, positioning, proof, primary links, and visual preview.
-4. Redesign the README structure before rewriting prose.
-5. Add useful visual assets: screenshots, architecture diagrams, workflow diagrams, badges, previews, or GitHub Pages links.
-6. Keep Markdown portable and GitHub-rendered: avoid scripts, fragile CSS, and layout tricks that fail in GitHub README rendering.
-7. Verify the README is scannable on mobile and desktop.
+4. Decide whether the repository needs a top logo or wordmark. Product-like, visual, skill, plugin, app, CLI, and portfolio repositories usually benefit from one when no strong identity exists.
+5. Redesign the README structure before rewriting prose.
+6. Add useful visual assets: logo/wordmark, screenshots, architecture diagrams, workflow diagrams, badges, previews, or GitHub Pages links.
+7. Keep Markdown portable and GitHub-rendered: avoid scripts, fragile CSS, and layout tricks that fail in GitHub README rendering.
+8. Verify the README is scannable on mobile and desktop.
 
 ## First Screen Pattern
 
 Use a strong opening block:
 
-- Centered project name or logo when the repo is product-like.
+- Centered project name with a small original logo or wordmark when the repo is product-like.
 - One concise positioning sentence in Chinese or bilingual form.
 - Badges grouped by meaning: status, docs, license, release, stars, platform, build.
 - Primary links: Demo, GitHub Pages, docs, paper, download, examples, changelog.
@@ -33,12 +34,26 @@ Avoid a first screen that is only a title, one subtitle, many tiny links, and a 
 
 When a product-like repository does not have a recognizable first-viewport identity, design a small original logo or wordmark for the README top.
 
+Use this capability when the user asks for a README logo, when a repository feels like a product or public skill, or when the first screen has no memorable visual anchor.
+
+Design rules:
+
 - Keep the project name as the real `<h1>` and place the logo above or beside it with GitHub-safe `<img>` HTML.
 - Prefer repo-owned assets such as `docs/readme-assets/logo.svg`, `docs/assets/logo.svg`, or `assets/logo.png`.
 - Make the logo original and project-specific; do not copy reference images, third-party mascots, trademarks, or marketplace icons.
-- Use SVG for crisp README rendering, and create a PNG fallback only when thumbnails, social cards, or external platforms need it.
+- Use SVG for crisp README rendering. Add PNG fallbacks only when thumbnails, social cards, or external platforms need them.
 - Keep the first viewport useful: logo, positioning sentence, badges, primary links, and one proof image should fit without burying the project explanation.
+- Match the logo to the repository's real domain: CLI tools can use terminal/code symbols, design systems can use layout marks, data repos can use charts, skills can use document/action marks.
 - Verify the asset path, alt text, file size, and light/dark GitHub readability.
+
+Output contract:
+
+- Save the primary logo under a stable repo-owned path.
+- Add the logo to the README top with a width between `180` and `360` unless the existing design calls for a different size.
+- Mention the logo in the README asset table when the README already has one.
+- If the repo has thumbnail or social-card assets, regenerate or update them so the new identity appears consistently.
+
+Read `references/logo-wordmark.md` for the full decision tree, sizing guidance, and GitHub-safe snippets.
 
 ## Layout Patterns
 
@@ -55,6 +70,8 @@ Read `references/patterns.md` when choosing a detailed pattern.
 ## Template Library
 
 Use `assets/templates/default.md` when the user asks for a complete standard README. It includes the full checklist: hero, badges, primary links, preview flow, highlights, quick start, usage, project structure, roadmap, Star History, Activity Overview, contribution, and license.
+
+Use `assets/templates/partials/logo-hero.md` when a README needs a top logo or wordmark block without replacing the entire document.
 
 Use `assets/templates/styles/` when the user asks for a specific visual direction or when the repo clearly fits one style:
 
@@ -75,6 +92,7 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 
 - Use real screenshots or generated preview images when they help visitors understand the project.
 - Place screenshots under repo-owned paths such as `assets/`, `docs/assets/`, or `public/`.
+- Place README logos under repo-owned paths and keep them independent from private local paths or generated temp folders.
 - Keep image widths responsive with GitHub-safe HTML: `<img src="..." width="900" />` or `style="max-width:900px;width:100%;"`.
 - Use Mermaid for architecture and workflow diagrams when a generated image is not necessary.
 - Use shields.io badges sparingly and group them under the title.
@@ -94,6 +112,7 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 ## README Polish Checklist
 
 - The first screen shows what the project is and why it matters.
+- Product-like repos have an original README logo or a conscious decision not to add one.
 - There is at least one visual proof element for UI/product/tutorial repos.
 - The primary action links are visible near the top.
 - Badges are relevant and not noisy.
@@ -117,5 +136,6 @@ For public GitHub repositories, make the README satisfy these three traits:
 
 - Check existing repository files before referencing screenshots, demos, docs, or badges.
 - Do not claim GitHub Pages, CI, releases, license, or package support unless the repo actually has it or the user asks to create it.
+- Do not copy a logo from a reference image. Use references only for composition direction and create a different original mark.
 - Preserve user content that represents project truth, but improve hierarchy, wording, and presentation.
 - When changing README links, verify local paths exist where practical.

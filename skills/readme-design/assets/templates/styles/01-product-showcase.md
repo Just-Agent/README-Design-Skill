@@ -1,6 +1,7 @@
 <!-- Product/app README template. Replace the sample product with your own. -->
 
 <div align="center">
+  <img src="./docs/readme-assets/logo.svg" alt="FlowBoard logo" width="280" />
   <h1>FlowBoard</h1>
   <p><strong>A focused workspace for turning scattered AI chats into reusable project notes.</strong></p>
   <p>Browser extension · Markdown export · Built for long research sessions</p>

@@ -19,6 +19,7 @@ A strong README usually needs these ten components:
 
 Optional but useful:
 
+- README logo or wordmark for product-like repositories without a memorable top identity.
 - Activity Overview / contribution type distribution for profile or contributor-focused READMEs.
 - Back-to-top links for long awesome lists or docs-heavy READMEs.
 - Bilingual entry points for Chinese projects that want global reach.
@@ -31,6 +32,32 @@ Optional but useful:
 - Prefer grounded claims: who it is for, what it does, how to try it, what changed, and where the proof is.
 - Use Star History when social proof matters, but do not over-index on it for young repos.
 - Treat Activity Overview as manual storytelling unless backed by a data source.
+
+## Logo And Wordmark Pattern
+
+Best for public products, skills, CLIs, plugins, templates, portfolios, and visual projects that need a stronger first impression.
+
+Structure:
+
+1. Original logo or wordmark stored in the repository.
+2. Real `<h1>` project name below or beside the logo.
+3. One concrete positioning sentence.
+4. Primary links and trustworthy badges.
+5. A screenshot, proof image, or output sample soon after the hero.
+
+Use the logo as an identity anchor, not as the only explanation. The README should still work if images fail to load.
+
+Good paths:
+
+- `docs/readme-assets/logo.svg`
+- `docs/assets/logo.svg`
+- `assets/logo.png`
+
+Avoid:
+
+- `file://` URLs or local absolute paths.
+- Copied brand marks, marketplace icons, or mascots from a reference image.
+- Huge hero images that push the README's actual value proposition too far down.
 
 ## Product README
 
@@ -125,6 +152,7 @@ Useful snippets:
 
 ```html
 <div align="center">
+  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="320" />
   <h1>Project Name</h1>
   <p><strong>One concise positioning sentence.</strong></p>
   <p>

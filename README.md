@@ -5,7 +5,11 @@
   <p>
     <a href="./skills/readme-design/SKILL.md">Skill</a>
     ·
+    <a href="./skills/readme-design/references/logo-wordmark.md">Logo Guide</a>
+    ·
     <a href="./skills/readme-design/assets/templates/default.md">Default Template</a>
+    ·
+    <a href="./skills/readme-design/assets/templates/partials/logo-hero.md">Logo Hero Partial</a>
     ·
     <a href="./skills/readme-design/assets/templates/README.md">Template Gallery</a>
     ·
@@ -13,9 +17,10 @@
   </p>
   <p>
     <img src="https://img.shields.io/badge/Codex%20Skill-ready-10A37F" alt="Codex Skill ready" />
-    <img src="https://img.shields.io/badge/templates-11-2563EB" alt="11 templates" />
+    <img src="https://img.shields.io/badge/templates-11%20%2B%20partials-2563EB" alt="11 templates plus partials" />
+    <img src="https://img.shields.io/badge/logo%20hero-supported-F59E0B" alt="README logo hero supported" />
     <img src="https://img.shields.io/badge/focus-README%20homepage-111827" alt="README homepage" />
-    <img src="https://img.shields.io/github/license/3873225350/README-Design-Skill" alt="license" />
+    <img src="https://img.shields.io/github/license/Just-Agent/README-Design-Skill" alt="license" />
   </p>
 </div>
 
@@ -25,13 +30,25 @@
 
 Most open-source READMEs fail in the same quiet way: the project may be useful, but the first screen does not say what it is, who it helps, where to try it, or why anyone should trust it.
 
-`readme-design` gives Codex a repeatable design workflow for README homepages: stronger first screens, cleaner proof, better screenshots, useful badges, grounded copywriting, and templates that render well on GitHub.
+`readme-design` gives Codex a repeatable design workflow for README homepages: stronger first screens, cleaner proof, better screenshots, useful badges, original README logos/wordmarks, grounded copywriting, and templates that render well on GitHub.
+
+## 2026 Upgrade
+
+This skill now treats a README top logo or wordmark as a first-class design capability.
+
+| Upgrade | What Changed | Where |
+| --- | --- | --- |
+| Logo decision flow | The skill decides when a public repo needs a top identity mark | [SKILL.md](./skills/readme-design/SKILL.md) |
+| Logo guide | Full rules for original marks, asset paths, snippets, and QA | [logo-wordmark.md](./skills/readme-design/references/logo-wordmark.md) |
+| Reusable partial | Drop-in GitHub-safe logo hero block | [logo-hero.md](./skills/readme-design/assets/templates/partials/logo-hero.md) |
+| Template coverage | Default, product, library, and bilingual templates now acknowledge README logos | [Template Gallery](./skills/readme-design/assets/templates/README.md) |
+| Public quality gate | Professional, beautiful, universal README criteria are part of the skill | [Design Patterns](./skills/readme-design/references/patterns.md) |
 
 ## Standard README Anatomy
 
 | # | Section | Purpose |
 | --- | --- | --- |
-| 1 | Hero | Name, logo, one-sentence positioning |
+| 1 | Hero | Name, optional original logo/wordmark, one-sentence positioning |
 | 2 | Badges | Status, license, docs, release, stars, platform |
 | 3 | Primary Links | Demo, GitHub Pages, docs, download, paper, examples |
 | 4 | Visual Proof | Screenshot, architecture map, preview, result sample |
@@ -48,6 +65,7 @@ Most open-source READMEs fail in the same quiet way: the project may be useful, 
 | Template | Best For | First Impression |
 | --- | --- | --- |
 | [Default](./skills/readme-design/assets/templates/default.md) | General high-quality README | Complete homepage skeleton |
+| [Logo Hero Partial](./skills/readme-design/assets/templates/partials/logo-hero.md) | Repositories that need only a top identity upgrade | Logo, h1, positioning, links, badges, preview slot |
 | [Product Showcase](./skills/readme-design/assets/templates/styles/01-product-showcase.md) | Apps and browser extensions | Visual, workflow-first, screenshot-ready |
 | [Research Roadmap](./skills/readme-design/assets/templates/styles/02-research-roadmap.md) | Research, roadmaps, paper collections | Topic map and output center |
 | [Library Docs](./skills/readme-design/assets/templates/styles/03-library-docs.md) | Packages, SDKs, APIs | Install, example, API table |
@@ -63,10 +81,31 @@ Most open-source READMEs fail in the same quiet way: the project may be useful, 
 
 - **First screen clarity**: a visitor should understand the project in 10 seconds.
 - **README logo / wordmark**: product-like repos should get a small original top identity when they do not already have one.
+- **Original visual identity**: reference images can guide composition, but the resulting mark must be distinct and repo-owned.
 - **Visual evidence**: screenshots, diagrams, result previews, or structured examples.
 - **Trust signals**: badges, Star History, license, contribution path, and real status.
 - **Non-AI copy**: fewer vague claims, more concrete objects, workflows, outputs, and constraints.
 - **GitHub-safe design**: Markdown, tables, Mermaid, shields, and conservative HTML that GitHub actually renders.
+
+## Logo Hero Workflow
+
+Use this when the user asks for a README logo or when a public product-like repository has no first-viewport identity.
+
+1. Read the repo README, assets, screenshots, package metadata, and public positioning.
+2. Choose a domain-specific mark: code, document, chart, window, path, checklist, route, or product object.
+3. Create an original asset under a repo-owned path such as `docs/readme-assets/logo.svg`.
+4. Add it above the README `<h1>` with GitHub-safe HTML and useful alt text.
+5. Keep badges, links, and a proof image close to the top.
+6. Regenerate thumbnails or social cards when the repository already maintains them.
+7. Verify paths, image readability, and claims before publishing.
+
+```html
+<div align="center">
+  <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="320" />
+  <h1>Project Name</h1>
+  <p><strong>One concrete sentence about what the project does.</strong></p>
+</div>
+```
 
 ## Install
 
@@ -82,6 +121,14 @@ In this workspace, the installed skill lives at:
 C:\Users\harzva\.codex\skills\readme-design
 ```
 
+This repository is the source copy. When updating the skill, keep these three places synchronized:
+
+| Target | Path or URL |
+| --- | --- |
+| Local source repo | `D:\study\code\0ai\产品\01-skills\README-Design-Skill` |
+| Installed Codex skill | `C:\Users\harzva\.codex\skills\readme-design` |
+| Remote repo | [Just-Agent/README-Design-Skill](https://github.com/Just-Agent/README-Design-Skill) |
+
 ## Example Prompts
 
 ```text
@@ -94,6 +141,10 @@ Use $readme-design and the research-roadmap template to make this project feel l
 
 ```text
 Use $readme-design to remove AI-ish copy, add visual proof, and make the first screen more convincing.
+```
+
+```text
+Use $readme-design to add an original README top logo, refresh the hero section, and update thumbnail assets.
 ```
 
 ## References

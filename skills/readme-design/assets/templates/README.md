@@ -1,6 +1,6 @@
 <div align="center">
   <h1>README Template Gallery</h1>
-  <p><strong>Eleven GitHub-safe README starting points that open like real examples, not broken placeholder files.</strong></p>
+  <p><strong>GitHub-safe README starting points, visual patterns, and a reusable logo hero partial.</strong></p>
   <p>Copy a template, replace the sample facts, remove sections that do not fit, and keep claims honest.</p>
 </div>
 
@@ -9,6 +9,7 @@
 | Template | Use When | Includes |
 | --- | --- | --- |
 | [`default.md`](./default.md) | You need a complete standard README | Hero, badges, links, preview flow, highlights, quick start, usage, structure, roadmap, Star History, Activity Overview |
+| [`partials/logo-hero.md`](./partials/logo-hero.md) | You only need to add a README top logo/wordmark block | GitHub-safe logo image, h1, positioning, links, badges, preview slot |
 
 ## Style Library
 
@@ -33,8 +34,10 @@
 - Remove Star History for private, new, or internal repositories.
 - Remove Activity Overview unless contribution mix is meaningful.
 - Replace sample names and links with facts from the repository before publishing.
+- Add the `logo-hero.md` partial when a public product-like repository lacks a recognizable top identity.
 
 ## Copywriting Rules
 
 - Avoid vague AI-ish words: powerful, innovative, seamless, empowering, comprehensive, next-generation.
 - Prefer concrete details: who it is for, what it does, where to try it, what the output looks like, and what is not supported yet.
+- When using a logo reference, create an original mark rather than copying the reference image.

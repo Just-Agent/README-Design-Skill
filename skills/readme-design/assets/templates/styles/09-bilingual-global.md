@@ -1,6 +1,7 @@
 <!-- Bilingual README template for Chinese projects that want global reach. -->
 
 <div align="center">
+  <!-- Optional / 可选: <img src="./docs/readme-assets/logo.svg" alt="Open Model Roadmaps logo" width="300" /> -->
   <h1>Open Model Roadmaps</h1>
   <p><strong>Track open model companies through papers, products, releases, and engineering decisions.</strong></p>
   <p><strong>追踪开源模型公司的论文、产品、发布节奏与工程路线。</strong></p>

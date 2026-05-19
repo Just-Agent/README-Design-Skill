@@ -5,6 +5,7 @@ Remove sections that do not match the repository.
 -->
 
 <div align="center">
+  <!-- Optional for product-like repos: <img src="./docs/readme-assets/logo.svg" alt="Project Name logo" width="320" /> -->
   <h1>Project Name</h1>
   <p><strong>A clear one-sentence promise for the project.</strong></p>
   <p>Who it is for · What it helps them do · Why it is worth trying</p>
