@@ -66,6 +66,28 @@ Output contract:
 
 Read `references/logo-wordmark.md` for the full decision tree, sizing guidance, and GitHub-safe snippets.
 
+## README Visual Proof And Diagram Safety
+
+README visuals include logos, screenshots, SVG diagrams, workflow illustrations, architecture maps, thumbnails, and generated preview images. Apply a visual safety gate to all of them, not only to logos.
+
+When creating SVG diagrams or README visual proof:
+
+- Prefer cards, lanes, tables, or Mermaid for text-heavy workflows. Do not force long labels into small circles, badges, bubbles, or narrow nodes.
+- Keep connector lines behind cards or between shapes; never run a line through text.
+- Give every text label a stable container with enough width and height at the intended README display size.
+- Avoid relying on `font-size` alone to make text fit. If a label is long, enlarge the container, wrap the phrase, move detail into a subtitle, or use a table instead.
+- Keep at least 10% internal padding inside diagram containers and at least 16 px visual spacing between neighboring text blocks at the SVG's native scale.
+- Use short labels inside graphics and move explanations to README prose or tables.
+- Do not ship a generated SVG or visual proof image if any text touches a border, overlaps another shape, crosses a connector, or becomes unreadable when displayed at the README width.
+
+Visual proof safety gate:
+
+1. Inspect the asset at the exact README display width, usually `700` to `900` px for wide proof images and `180` to `320` px for logos.
+2. Check desktop and narrow mobile rendering when the README depends on a visual in the first two scrolls.
+3. Revise any visual with clipped text, overlapping labels, connector-line collisions, edge collisions, or text that is too small to read.
+4. If visual inspection is not available, prefer Markdown tables or Mermaid over a custom SVG diagram.
+5. For public repositories, mention any important visual asset path in the README and verify the path exists.
+
 ## Layout Patterns
 
 Prefer one of these:
@@ -106,6 +128,8 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 - Place README logos under repo-owned paths and keep them independent from private local paths or generated temp folders.
 - Keep image widths responsive with GitHub-safe HTML: `<img src="..." width="900" />` or `style="max-width:900px;width:100%;"`.
 - Use Mermaid for architecture and workflow diagrams when a generated image is not necessary.
+- For SVG workflow diagrams, prefer wide cards or lanes over small circular nodes when text labels are longer than one short word.
+- Verify custom SVG diagrams for no overlap, no clipped text, no connector-line collisions, and readable text at README display width.
 - Use shields.io badges sparingly and group them under the title.
 - Use tables for comparisons, matrices, roadmap status, and project collections.
 - Use callouts with blockquotes only for important warnings or positioning.
@@ -125,6 +149,7 @@ Templates are written as polished sample READMEs, not raw placeholder dumps. Do 
 - The first screen shows what the project is and why it matters.
 - Product-like repos have an original README logo or a conscious decision not to add one.
 - README logos pass the logo safety gate: no clipping, no hidden text, no overlapping elements, no long title embedded in the SVG, and no edge collisions.
+- README visual proof and SVG diagrams pass the diagram safety gate: no label overlap, no connector-line collisions, no cramped text containers, and no unreadable text at display width.
 - There is at least one visual proof element for UI/product/tutorial repos.
 - The primary action links are visible near the top.
 - Badges are relevant and not noisy.
